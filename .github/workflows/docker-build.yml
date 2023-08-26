@@ -1,0 +1,34 @@
+name: Docker Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Docker image
+        run: docker build -t v1.0.0
+
+      - name: Log in to Docker Hub
+        env:
+          DOCKER_USERNAME: mandeepsainiok
+          DOCKER_PASSWORD: WXYZ12345
+        run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+      - name: Push Docker image to Docker Hub
+        run: docker push v1.0.0
