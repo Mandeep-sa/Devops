@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Docker image
-        run: docker build -t v1.
+        run: docker build . -t yourusername/example-node-app
 
       - name: Log in to Docker Hub
         env:
@@ -31,4 +31,4 @@ jobs:
         run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
       - name: Push Docker image to Docker Hub
-        run: docker push v1
+        run: docker push yourusername/example-node-app
