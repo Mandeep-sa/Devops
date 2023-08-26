@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Docker image
-        run: docker build -t v1
+        run: docker build -t v1.
 
       - name: Log in to Docker Hub
         env:
