@@ -1,0 +1,27 @@
+{
+  "name": "rapid_fort_assessment",
+  "version": "1.0.0",
+  "description": "Building devops project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mandeep-sa/Rapid_fort_assessment.git"
+  },
+  "keywords": [
+    "[\"file",
+    "upload\"",
+    "\"REST",
+    "API\"",
+    "\"Docker\"",
+    "\"Kubernetes\"]"
+  ],
+  "author": "Mandeep Saini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mandeep-sa/Rapid_fort_assessment/issues"
+  },
+  "homepage": "https://github.com/Mandeep-sa/Rapid_fort_assessment#readme"
+}
