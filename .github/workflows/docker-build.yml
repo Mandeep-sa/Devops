@@ -31,4 +31,4 @@ jobs:
         run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
       - name: Push Docker image to Docker Hub
-        run: docker push docker push mandeepsainiok/devops01:mandeepimage
+        run: docker push devops01:mandeepimage
