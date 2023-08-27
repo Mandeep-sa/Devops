@@ -16,4 +16,4 @@ spec:
         - name: my-web-server
           image: mandeepsainiok/devops01:myimage
           ports:
-            - containerPort: 3000
+            - containerPort: 8080
