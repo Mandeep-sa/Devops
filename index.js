@@ -28,6 +28,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
     if (!mimeType) {
         return res.status(400).json({ error: 'Invalid file format.' });
     }
+    
 
     const fileData = {
         Filename: req.file.originalname,
