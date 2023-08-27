@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-kubernetes-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-web-server
+  template:
+    metadata:
+      labels:
+        app: my-web-server
+    spec:
+      containers:
+        - name: my-web-server
+          image: mandeepsainiok/devops01:myimage
+          ports:
+            - containerPort: 3000
