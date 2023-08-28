@@ -49,9 +49,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
         // Add character and word count to the fileData object
         fileData.numCharacters = numCharacters;
         fileData.numWords = numWords;
-        // res.json(fileData);
-        const queryParams = new URLSearchParams(fileData);
-        res.redirect(`/file-data.html?${queryParams.toString()}`);
+        res.json(fileData);
     });
 });
 
